@@ -6,4 +6,12 @@
     folder => KEBAB   
     css => SNAKE
 - Error handling
+
+*/
+
+/* 
+Traditional API
+Rest API
+GraphQl API
+...
 */
