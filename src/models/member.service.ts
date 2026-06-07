@@ -34,14 +34,12 @@ class MemberService {
       .exec();
     if (!member) throw new Errors(HttpCode.NOT_FOUND, Message.NO_MEMBER_NICK);
 
-    const isMatch = input.memberPassoword === member.memberPassoword;
-    console.log("isMatch:", isMatch);
+    const isMatch = input.memberPassword === member.memberPassword;
     if (!isMatch) {
       throw new Errors(HttpCode.UNAUTHORIZED, Message.WRONG_PASSWORD);
     }
 
-    console.log("member:", member);
-    return member;
+    return await this.memberModel.findById(member._id).exec();
   }
 }
 
