@@ -29,7 +29,6 @@ export interface MemberInput {
 }
 
 export interface LoginInput {
-  memberPassword: any;
   memberNick: string;
-  memberPassoword: string;
+  memberPassword: string;
 }
