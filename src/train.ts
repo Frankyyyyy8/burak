@@ -1,4 +1,34 @@
 /*
+R-TASK
+
+Shunday function yozing, u string parametrga ega bolsin. 
+String "1+2" holatda pass qilinganda string ichidagi 
+sonlar yigindisini number holatda qaytarsin.
+MASALAN: calculate("1+3") return 4; 
+*/
+
+// Yechim:
+function calculate(expression: string): number {
+  let current = "";
+  let sum = 0;
+
+  for (const char of expression) {
+    if (char === "+") {
+      sum += Number(current);
+      current = "";
+    } else {
+      current += char;
+    }
+  }
+
+  sum += Number(current);
+
+  return sum;
+}
+
+console.log(calculate("1+3"));
+
+/*
 TASK Q:
 
 Shunday function yozing, u 2 ta parametrga ega bo'lib
@@ -10,16 +40,16 @@ MASALAN: hasProperty({ name: "BMW", model: "M3" }, "model"); return true;
 */
 
 // Yechim:
-function hasProperty(obj: object, prop: string): boolean {
-  for (const key in obj) {
-    if (key === prop) {
-      return true;
-    }
-  }
-  return false;
-}
+// function hasProperty(obj: object, prop: string): boolean {
+//   for (const key in obj) {
+//     if (key === prop) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
 
-console.log(hasProperty({ name: "BMW", model: "M3" }, "model"));
+// console.log(hasProperty({ name: "BMW", model: "M3" }, "model"));
 
 /*   Project Standards:
 - Logging standards
