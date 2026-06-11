@@ -11,22 +11,15 @@ MASALAN: hasProperty({ name: "BMW", model: "M3" }, "model"); return true;
 
 // Yechim:
 function hasProperty(obj: object, prop: string): boolean {
-    for (const key in obj) {
-        if (key === prop) {
-            return true;
-        }
+  for (const key in obj) {
+    if (key === prop) {
+      return true;
     }
-    return false;
+  }
+  return false;
 }
 
 console.log(hasProperty({ name: "BMW", model: "M3" }, "model"));
-
-
-
-
-
-
-
 
 /*   Project Standards:
 - Logging standards
@@ -49,4 +42,9 @@ GraphQl API
 /*
  Traditional FD    =>  SSR  =>  EJS
  Modern FD         =>  SPA  =>  REACT
+*/
+
+/*
+request join
+self destroy 
 */
