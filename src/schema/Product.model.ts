@@ -8,13 +8,13 @@ import {
 
 const productScheme = new Schema(
   {
-    ProductStatus: {
+    productStatus: {
       type: String,
       enum: ProductStatus,
       default: ProductStatus.PAUSE,
     },
 
-    ProductCollection: {
+    productCollection: {
       type: String,
       enum: ProductCollection,
       required: true,
@@ -41,15 +41,14 @@ const productScheme = new Schema(
       default: ProductSize.NORMAL,
     },
 
-    ProductVolume: {
-      type: String,
+    productVolume: {
+      type: Number,
       enum: ProductVolume,
       default: ProductVolume.ONE,
     },
 
     productDesc: {
       type: String,
-      required: true,
     },
 
     productImages: {

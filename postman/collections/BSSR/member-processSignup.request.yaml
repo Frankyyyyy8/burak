@@ -1,0 +1,22 @@
+$kind: http-request
+name: member:processSignup
+url: localhost:3003/admin/signup
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: memberNick
+      value: Burak
+    - type: text
+      key: memberPhone
+      value: "821024758998"
+    - type: text
+      key: memberPassword
+      value: damir2020
+    - type: file
+      key: memberImage
+      src: /Users/ismigulkhasanboeva/Desktop/begginer/images/other/header6.png
+settings:
+  protocolVersion: auto
+order: 5000

@@ -1,0 +1,11 @@
+$kind: http-request
+url: localhost:3003/login
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "memberNick": "Robert",
+        "memberPassword": "damir2020"
+    }
+order: 2000

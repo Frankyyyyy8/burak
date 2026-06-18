@@ -1,0 +1,10 @@
+workspace:
+  id: 0e22447c-e6b0-486d-a377-d2507205ae0c
+localResources:
+  collections:
+    - ../postman/collections/BSSR
+    - ../postman/collections/REST API
+cloudResources:
+  collections:
+    ../postman/collections/BSSR: 54896724-00311d72-1389-4820-9f7f-6bd5a5cbfccd
+    ../postman/collections/REST API: 54896724-6b6b7613-c1d6-437e-885f-1b72d5c19b17
