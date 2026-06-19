@@ -12,12 +12,12 @@ body:
       disabled: false
     - type: text
       key: productName
-      value: Kebab
+      value: Steak
       description: ""
       disabled: false
     - type: text
       key: productPrice
-      value: "10"
+      value: "15"
       description: ""
       disabled: false
     - type: text
@@ -42,6 +42,10 @@ body:
       disabled: false
     - type: file
       key: productImages
-      src: []
+      src:
+        - /Users/ismigulkhasanboeva/Downloads/k.jpeg
+        - /Users/ismigulkhasanboeva/Downloads/kebab.jpeg
+        - /Users/ismigulkhasanboeva/Downloads/Lula_kebab_2.jpg
+        - /Users/ismigulkhasanboeva/Downloads/tavuk_sis1-600x450.webp
       disabled: false
 order: 9000
