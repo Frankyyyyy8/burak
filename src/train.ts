@@ -1,4 +1,27 @@
 /**
+ TASK U
+
+Shunday function tuzing, uni number parametri bo'lsin.
+Va bu function berilgan parametrgacha, 0'dan boshlab
+oraliqda nechta toq sonlar borligini aniqlab return qilsi.
+
+MASALAN: sumOdds(9) return 4; sumOdds(11) return 5;
+*/
+//Yechim:
+function sumOdds(n: number): number {
+  let count = 0;
+
+  for (let i = 1; i < n; i += 2) {
+    count++;
+  }
+
+  return count;
+}
+
+console.log(sumOdds(9));
+console.log(sumOdds(11));
+
+/**
  TASK T
 
   Shunday function tuzing, u sonlardan tashkil topgan 2'ta 
@@ -9,11 +32,11 @@ return [0, 3, 4, 4, 6, 30, 31];
 */
 
 //Yechim:
-function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
+/* function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
   return [...arr1, ...arr2].sort((a, b) => a - b);
 }
 
-console.log(mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]));
+console.log(mergeSortedArrays([0, 3, 4, 31], [4, 6, 30])); */
 
 /*
 S-TASK
