@@ -1,4 +1,35 @@
 /**
+ TASK V
+
+Shunday function yozing, uni string parametri bo'lsin.
+Va bu function stringdagi har bir harfni o'zi bilan
+necha marotaba taktorlanganligini ko'rsatuvchi object qaytarsin.
+  
+MASALAN: countChars("hello") return {h: 1, e: 1, l: 2, o: 1}
+
+Yuqoridagi misolda, 'hello' so'zi tarkibida
+qatnashgan harflar necha marotaba takrorlangini bilan
+object sifatida qaytarilmoqda.
+*/
+
+// Yechim:
+function countChars(str: string): { [key: string]: number } {
+  const result: { [key: string]: number } = {};
+
+  for (const char of str) {
+    if (result[char]) {
+      result[char] += 1;
+    } else {
+      result[char] = 1;
+    }
+  }
+
+  return result;
+}
+
+console.log(countChars("hello"));
+
+/**
  TASK U
 
 Shunday function tuzing, uni number parametri bo'lsin.
@@ -8,7 +39,7 @@ oraliqda nechta toq sonlar borligini aniqlab return qilsi.
 MASALAN: sumOdds(9) return 4; sumOdds(11) return 5;
 */
 //Yechim:
-function sumOdds(n: number): number {
+/* function sumOdds(n: number): number {
   let count = 0;
 
   for (let i = 1; i < n; i += 2) {
@@ -20,6 +51,7 @@ function sumOdds(n: number): number {
 
 console.log(sumOdds(9));
 console.log(sumOdds(11));
+*/
 
 /**
  TASK T
