@@ -18,7 +18,7 @@
         <li
           class="nav-item"
           style="cursor: pointer"
-          onclick="return confirm('Do you want to logout?')"
+          onclick="return confirm('Do you want to logout?');"
         >
           <a class="nav-link" href="/admin/logout">Logout</a>
         </li>
@@ -44,7 +44,7 @@
               </tr>
             </thead>
             <!--  LOOP PRODUCTS: START  -->
-             <% products.map(function(value, key) { %>
+            <% products.map(function(value, key) { %>
             <tbody style="background: white">
               <td> <%= key + 1 %></td>
               <td><%= value.productName %></td>
@@ -61,6 +61,7 @@
               </td>
             </tbody>
             <% }) %>
+            
             <!--  LOOP PRODUCTS: END  -->
           </table>
           <div
@@ -72,7 +73,9 @@
             </button>
           </div>
         </div>
+
         <form
+        onsubmit="return validateForm()"
           action="/admin/product/create"
           method="POST"
           class="dish-container"
@@ -167,6 +170,7 @@
                   name="productImages"
                   class="image-one"
                   required
+                  onchange="previewFileHandler(this, 1)"
                 />
               </div>
               <div class="upload-img-box">
@@ -176,6 +180,8 @@
                   id="file"
                   name="productImages"
                   class="image-two"
+                  onchange="previewFileHandler(this, 2)"
+
                 />
               </div>
               <div class="upload-img-box">
@@ -185,6 +191,7 @@
                   id="file"
                   name="productImages"
                   class="image-three"
+                  onchange="previewFileHandler(this, 3)"
                 />
               </div>
               <div class="upload-img-box">
@@ -194,6 +201,7 @@
                   id="file"
                   name="productImages"
                   class="image-four"
+                  onchange="previewFileHandler(this, 4)"
                 />
               </div>
               <div class="upload-img-box">
@@ -203,6 +211,7 @@
                   id="file"
                   name="productImages"
                   class="image-five"
+                  onchange="previewFileHandler(this, 5)"
                 />
               </div>
               <input name="restaurantIid" class="restaurant-id" hidden />
