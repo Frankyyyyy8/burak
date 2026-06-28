@@ -16,13 +16,13 @@ const store = new MongoDBStore({
 });
 
 /** 1-ENTRANCE **/
-const app = express();
-app.use(express.static(path.join(__dirname, "public")));
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(morgan(MORGAN_FORMAT));
+const app = express(); // backend framework
+app.use(express.static(path.join(__dirname, "public"))); // middleware disign patern public folderni tashqriga ochiqlayapti
+app.use(express.urlencoded({ extended: true })); // bu esa traditional api ni support qilyapti
+app.use(express.json()); // rest api ni support qilyapti
+app.use(morgan(MORGAN_FORMAT)); // login standard larni joriy qiladi consolda backendda
 
-/** 2-SESSIONS **/
+/** 2-SESSIONS **/  // Tamga qurish uchun
 app.use(
   session({
     secret: String(process.env.SESSION_SECRET),
