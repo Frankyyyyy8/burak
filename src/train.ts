@@ -1,4 +1,33 @@
 /**
+ TASK Y
+
+Shunday function yozing, uni 2'ta array parametri bo'lsin.
+Bu function ikkala arrayda ham ishtirok etgan bir xil
+qiymatlarni yagona arrayga joylab qaytarsin.
+
+MASALAN: findIntersection([1,2,3], [3,2,0]) return [2,3]
+
+Yuqoridagi misolda, argument sifatida berilayotgan array'larda
+o'xshash sonlar mavjud. Function'ning vazifasi esa ana shu
+ikkala array'da ishtirok etgan o'xshash sonlarni yagona arrayga
+joylab return qilmoqda.
+ */
+ // Yechim:
+function findIntersection(arr1: number[], arr2: number[]): number[] {
+  const result: number[] = [];
+
+  for (const num of arr1) {
+    if (arr2.includes(num)) {
+      result.push(num);
+    }
+  }
+
+  return result;
+}
+
+console.log(findIntersection([1, 2, 3], [3, 2, 0]));
+
+/**
  TASK X
 
 Shunday function yozing, uni object va string parametrlari bo'lsin.
