@@ -1,4 +1,36 @@
 /**
+ TASK Z
+
+Shunday function yozing. Bu function sonlardan iborat array
+qabul qilsin. Function'ning vazifasi array tarkibidagi juft
+sonlarni topib ularni yig'disini qaytarsin.
+
+MASALAN:
+sumEvens([1, 2, 3]); return 2;
+sumEvens([1, 2, 3, 2]); return 4;
+
+Yuqoridagi misolda, bizning funktsiya
+berilayotgan array tarkibidagi sonlar ichidan faqatgina juft bo'lgan
+sonlarni topib, ularni hisoblab yig'indisini qaytarmoqda.
+ */
+
+// Yechim:
+function sumEvens(arr: number[]): number {
+  let sum = 0;
+
+  for (let num of arr) {
+    if (num % 2 === 0) {
+      sum += num;
+    }
+  }
+
+  return sum;
+}
+
+console.log(sumEvens([1, 2, 3]));
+console.log(sumEvens([1, 2, 3, 2]));
+
+/**
  TASK Y
 
 Shunday function yozing, uni 2'ta array parametri bo'lsin.
@@ -12,8 +44,8 @@ o'xshash sonlar mavjud. Function'ning vazifasi esa ana shu
 ikkala array'da ishtirok etgan o'xshash sonlarni yagona arrayga
 joylab return qilmoqda.
  */
- // Yechim:
-function findIntersection(arr1: number[], arr2: number[]): number[] {
+// Yechim:
+/* function findIntersection(arr1: number[], arr2: number[]): number[] {
   const result: number[] = [];
 
   for (const num of arr1) {
@@ -26,6 +58,7 @@ function findIntersection(arr1: number[], arr2: number[]): number[] {
 }
 
 console.log(findIntersection([1, 2, 3], [3, 2, 0]));
+*/
 
 /**
  TASK X
@@ -44,7 +77,7 @@ tarkibida kalit sifatida 2 marotaba takrorlanganligi uchun 2 soni return qilmoqd
  */
 
 //Yechim:
-function countOccurrences(obj: any, key: string): number {
+/* function countOccurrences(obj: any, key: string): number {
   let count = 0;
 
   for (const currentKey in obj) {
@@ -69,6 +102,8 @@ const data = {
 };
 
 console.log(countOccurrences(data, "model"));
+*/
+
 /**
  TASK W
 
