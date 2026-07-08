@@ -49,19 +49,27 @@ class MemberService {
       throw new Errors(HttpCode.FORBIDDEN, Message.BLOCKED_USER);
     }
 
-    console.log("member:", member);
-
     const isMatch = await bcrypt.compare(
       input.memberPassword,
       member.memberPassword,
     );
-
     if (!isMatch) {
       throw new Errors(HttpCode.UNAUTHORIZED, Message.WRONG_PASSWORD);
     }
 
     return await this.memberModel.findById(member._id).lean().exec();
   }
+
+  public async getMemberDetail(member: Member): Promise<Member> {
+    const memberId = shapeIntoMongooseObjectId(member._id);
+    const result = await this.memberModel
+      .findOne({ _id: memberId, memberStatus: MemberStatus.AVTIVE })
+      .exec();
+    if (!result) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND);
+
+    return result;
+  }
+
   /** SSR */
 
   public async processSignup(input: MemberInput): Promise<Member> {
