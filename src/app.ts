@@ -3,6 +3,7 @@ import path from "path";
 import router from "./router";
 import routerAdmin from "./router-admin";
 import morgan from "morgan";
+import cookieParser from "cookie-parser";
 import { MORGAN_FORMAT } from "./libs/config";
 
 import session from "express-session";
@@ -20,9 +21,10 @@ const app = express(); // backend framework
 app.use(express.static(path.join(__dirname, "public"))); // middleware disign patern public folderni tashqriga ochiqlayapti
 app.use(express.urlencoded({ extended: true })); // bu esa traditional api ni support qilyapti
 app.use(express.json()); // rest api ni support qilyapti
+app.use(cookieParser());
 app.use(morgan(MORGAN_FORMAT)); // login standard larni joriy qiladi consolda backendda
 
-/** 2-SESSIONS **/  // Tamga qurish uchun
+/** 2-SESSIONS **/ // Tamga qurish uchun
 app.use(
   session({
     secret: String(process.env.SESSION_SECRET),
