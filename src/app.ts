@@ -19,6 +19,7 @@ const store = new MongoDBStore({
 /** 1-ENTRANCE **/
 const app = express(); // backend framework
 app.use(express.static(path.join(__dirname, "public"))); // middleware disign patern public folderni tashqriga ochiqlayapti
+app.use("/uploads", express.static("./uploads"));
 app.use(express.urlencoded({ extended: true })); // bu esa traditional api ni support qilyapti
 app.use(express.json()); // rest api ni support qilyapti
 app.use(cookieParser());
