@@ -8,15 +8,20 @@ body:
     - type: text
       key: memberNick
       value: Burak
+      disabled: false
     - type: text
       key: memberPhone
       value: "821024758998"
+      disabled: false
     - type: text
       key: memberPassword
       value: damir2020
+      disabled: false
     - type: file
       key: memberImage
-      src: /Users/ismigulkhasanboeva/Desktop/begginer/images/other/header6.png
+      src:
+        - /Users/ismigulkhasanboeva/Downloads/chicken-kebabs-recipe-1.jpg
+      disabled: false
 settings:
   protocolVersion: auto
 order: 5000
