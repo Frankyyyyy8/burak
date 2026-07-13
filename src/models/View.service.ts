@@ -11,7 +11,7 @@ class ViewService {
 
   public async checkViewExistance(input: ViewInput): Promise<View> {
     return await this.viewModel
-      .findOne({ memberId: input.memberId, viewRefId: input.viewRefId })
+      .findOne({  viewRefId: input.viewRefId })
       .exec();
   }
 
