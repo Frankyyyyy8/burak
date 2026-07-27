@@ -1,3 +1,4 @@
+import cors from "cors";
 import express from "express";
 import path from "path";
 import router from "./router";
@@ -22,6 +23,7 @@ app.use(express.static(path.join(__dirname, "public"))); // middleware disign pa
 app.use("/uploads", express.static("./uploads"));
 app.use(express.urlencoded({ extended: true })); // bu esa traditional api ni support qilyapti
 app.use(express.json()); // rest api ni support qilyapti
+app.use(cors({ credentials: true, origin: true }));
 app.use(cookieParser());
 app.use(morgan(MORGAN_FORMAT)); // login standard larni joriy qiladi consolda backendda
 
